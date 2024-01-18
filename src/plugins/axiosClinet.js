@@ -1,6 +1,6 @@
 import axios from "axios";
 const axiosClinet = axios.create({
-    baseURL: "http://18.139.227.114:3300/api"
+    baseURL: "http://18.139.227.114:3300/api/"
 })
 
 axiosClinet.interceptors.request.use((config)=>{

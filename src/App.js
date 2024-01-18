@@ -3,6 +3,7 @@ import "./App.css";
 import Auth from "./components/Auth";
 import Admin from "./components/Admin";
 import SupperAdmin from "./components/SupperAdmin";
+import { Header } from "./components/Header";
 
 function App() {
 // fetch
@@ -52,7 +53,8 @@ function App() {
     <div className="App">
         <BrowserRouter>
           <Routes>
-            <Route path="" element={<Auth/>}/>
+            <Route path="/" element={<Header/>}/>
+            <Route path="auth" element={<Auth/>}/>
             <Route path="admin" element={<Admin/>}/>
             <Route path="supper_admin" element={<SupperAdmin/>}/>
           </Routes>
