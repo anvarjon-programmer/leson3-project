@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "number": "1",
+      "firstName": "Anvar",
+      "department": "It",
+      "gender": "male",
+      "age": "18",
+      "id": "01e4"
+    },
+    {
+      "number": "2",
+      "firstName": "Alijon",
+      "department": "IT",
+      "gender": "male",
+      "age": "18",
+      "id": "f587"
+    },
+    {
+      "id": "f2e3",
+      "number": "3",
+      "firstName": "Gulshoda",
+      "department": "marketing",
+      "gender": "male",
+      "age": "18"
+    },
+    {
+      "id": "b5d4",
+      "number": "4",
+      "firstName": "Azimjon",
+      "department": "Accounting",
+      "gender": "male",
+      "age": "15"
+    },
+    {
+      "number": "5",
+      "firstName": "Asadbek",
+      "department": "IT",
+      "gender": "female",
+      "age": "35",
+      "id": "fc30"
+    },
+    {
+      "id": "6f72",
+      "number": "6",
+      "firstName": "Anvar",
+      "department": "IT",
+      "gender": "",
+      "age": "18"
+    }
+  ]
+}
