@@ -12,6 +12,9 @@ export default function Cruds() {
   const [isOpen, setIsOpen] = useState(false);
   const [editingId, setEditingId] = useState(null); 
   const [select, setSelect] = useState("it")
+
+  const [currentPage,setCurrentPage] = useState(1);
+  const [itemsPerPage,setitemsPerPage] = useState(6);
   
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -83,6 +86,12 @@ export default function Cruds() {
       .catch((err) => console.log("error " + err));
   }, []);
 
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentCountries = data.slice(indexOfFirstItem,indexOfLastItem);
+
+  const paginate = pageNumber => setCurrentPage(pageNumber)
+
   console.log(gender);
 
   return (
@@ -137,7 +146,7 @@ export default function Cruds() {
             </tr>
           </thead>
           <tbody className=''>
-            {data.filter(a => a.department.toLowerCase().indexOf(select) != -1).map((item, index) => {
+            {currentCountries.filter(a => a.department.toLowerCase().indexOf(select) != -1).map((item, index) => {
               return (
                 <tr key={index}>
                   <td>{item.number}</td>
@@ -157,6 +166,13 @@ export default function Cruds() {
             })}
           </tbody>
         </table>
+        <div className="paginationAlbums">
+        {[...Array(Math.ceil(data.length / itemsPerPage)).keys()].map(number => (
+                    <button className='btn btn-primary' key={number + 1} onClick={() => paginate(number + 1)}>
+                        {number + 1}
+                    </button>
+                ))}
+        </div>
       </div>
     </>
   );

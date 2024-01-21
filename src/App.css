@@ -56,3 +56,10 @@
     align-items: center;
     justify-content: space-between;
   }
+  .delt{
+    color: #fff;
+    font-size: 18px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+  }
